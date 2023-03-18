@@ -22,6 +22,10 @@ return new class extends Migration
             $table->unsignedBigInteger('quatity')->default(0);
             $table->boolean('status')->default(false);
             $table->string('image');
+            $table->integer("sales")->default(0);
+            $table->string("origin");
+            $table->integer("offer")->default(0);
+            $table->foreignId('category_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
     }
