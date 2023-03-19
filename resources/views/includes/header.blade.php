@@ -4,12 +4,12 @@
         <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-0">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto">
-                    <li class="nav-item">
+                    <li class="nav-item haver_back">
                         <!-- Link--><a class="nav-link active" href="{{Route('home')}}">Home</a>
                     </li>
 
                     @foreach ($categories as $cat)
-                        <li class="nav-item">
+                        <li class="nav-item haver_back">
                             <a class="nav-link" href="{{Route('category',$cat->id)}}">{{$cat->name}}</a>
                         </li>
                     @endforeach
