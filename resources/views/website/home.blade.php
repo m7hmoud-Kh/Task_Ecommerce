@@ -6,11 +6,23 @@
 
 
 @section('content')
+    <form action="{{route('search')}}" method="GET">
+        @csrf
+        @method('GET')
+        <div class="input-group d-flex justify-conent-center mt-2 w-50"
+        style="margin-left: 25%">
+            <input class="form-control mr-5" type="search"
+            placeholder="Search by product name , category name , supplier name" aria-label="Search" name="searchKey">
+            <button class="btn btn-outline-warning" type="submit">Search</button>
+        </div>
+    </form>
     <section class="py-5">
         <div class="container p-0">
             <div class="row">
+
                 <!-- SHOP LISTING-->
                 <div class="col-lg-12 order-1 order-lg-2 mb-5 mb-lg-0">
+
                     <div class="row">
 
                         @foreach ($products as $product)

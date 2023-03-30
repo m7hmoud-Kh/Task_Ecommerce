@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string("origin");
             $table->integer("offer")->default(0);
             $table->foreignId('category_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignId('supplier_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
     }

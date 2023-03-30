@@ -9,6 +9,6 @@ use App\Http\Controllers\Website\CategoryController;
 
 Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/category/{id}', [CategoryController::class, 'index'])->name('category');
-
+Route::get('/search', [HomeController::class, 'search'])->name('search');
 Auth::routes();
 

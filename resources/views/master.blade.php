@@ -34,14 +34,14 @@
 <body>
     <div class="page-holder">
         <!-- navbar-->
-        @include('includes.header')
+        @include('includes.website.header')
         <div class="container">
             <!-- HERO SECTION-->
-            @yield('hero_section', View::make('includes.hero_section'))
+            @yield('hero_section', View::make('includes.website.hero_section'))
             @yield('content')
         </div>
         {{-- footer --}}
-        @include('includes.footer')
+        @include('includes.website.footer')
         <!-- JavaScript files-->
         <script src="{{asset('website/vendor/jquery/jquery.min.js')}}"></script>
         <script src="{{asset('website/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
