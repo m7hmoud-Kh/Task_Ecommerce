@@ -21,7 +21,12 @@ class Product extends Model
         return $this->belongsTo(Supplier::class, 'supplier_id');
     }
 
-    public function status($value){
+    public function cartItem()
+    {
+        return $this->hasMany(CartItem::class);
+    }
+
+    public function status($value) {
         return  $value ? '<span class="badge badge-success">Avilable</span>' : '<span class="badge badge-danger">Unavilable</span>';
     }
 

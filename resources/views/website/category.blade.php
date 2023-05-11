@@ -26,6 +26,8 @@
 @endsection
 
 @section('content')
+@include('includes.website.flash_session')
+
 <section class="py-5">
     <div class="container p-0">
         <div class="row">
@@ -43,12 +45,10 @@
                                             src="{{ asset('assets/products/' . $product->image) }}" alt="..."></a>
                                     <div class="product-overlay">
                                         <ul class="mb-0 list-inline">
-                                            <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
-                                                    href="#"><i class="far fa-heart"></i>
-                                                </a></li>
+
                                             <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark"
-                                                    href="#">Add to
-                                                    cart</a></li>
+                                                href="{{Route('cart.add',$product->id)}}">Add to
+                                                cart</a></li>
                                         </ul>
                                     </div>
                                 </div>

@@ -5,7 +5,9 @@
 @endsection
 
 
+
 @section('content')
+    @include('includes.website.flash_session')
     <form action="{{route('search')}}" method="GET">
         @csrf
         @method('GET')
@@ -35,11 +37,8 @@
                                                 src="{{ asset('assets/products/' . $product->image) }}" alt="..."></a>
                                         <div class="product-overlay">
                                             <ul class="mb-0 list-inline">
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
-                                                        href="#"><i class="far fa-heart"></i>
-                                                    </a></li>
                                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark"
-                                                        href="#">Add to
+                                                        href="{{Route('cart.add',$product->id)}}">Add to
                                                         cart</a></li>
                                             </ul>
                                         </div>

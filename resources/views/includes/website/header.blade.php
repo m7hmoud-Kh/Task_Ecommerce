@@ -23,6 +23,14 @@
                             </div>
                         </li>
                     @endif
+
+                    @auth
+                        <li class="nav-item haver_back">
+                            <!-- Link--><a class="nav-link " href="{{ Route('cart.all') }}">Cart</a>
+                        </li>
+                    @endauth
+
+
                 </ul>
 
 
@@ -66,7 +74,6 @@
                                   document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-
 
 
 
